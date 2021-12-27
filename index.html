@@ -29,7 +29,7 @@
 <body>
   <!-- status include -->
   <div data-include-path="assets/html/status-bar.html"></div>
-  <div class="swiper">
+  <div class="swiper home">
     <div class="swiper-wrapper pt-44">
       <main class="main swiper-slide">
         <section class="main__account">
@@ -401,12 +401,11 @@
       </div>
     </div>
   </div>
-
   <!-- home 3번째 -->
   <!-- nav include -->
   <div data-include-path="assets/html/gnb.html"></div>
   <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper.home', {
       // Optional parameters
       loop: false,
       // If we need pagination
@@ -416,7 +415,7 @@
       // Navigation arrows
       // And if we need scrollbar
     });
-
+    // swiper.update()
   </script>
 </body>
 

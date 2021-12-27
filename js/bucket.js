@@ -4,7 +4,6 @@ new Swiper('.container > .swiper', {
 
   // Optional parameters
   loop: false,
-  slidesPerView: 2,
   spaceBetween: 10,
   // If we need pagination
   // Navigation arrows
@@ -36,7 +35,6 @@ modalAdd.forEach(function (e, i) {
     pEl1.innerHTML = bucketTitle.value
     pEl2.textContent = bucketTarget.value
     모달닫기.classList.remove('active')
-    // swiper.update()
   })
 })
 

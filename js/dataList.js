@@ -9,12 +9,7 @@ fetch('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c
 
 function start(bank) {
   let payoutLi = document.querySelectorAll('.payout__list');
-  let num = 5;
-  // payoutLi[2].appendChild(ulElem)
-  
-  const bankData = bank.bankList
-  payoutLi.forEach(function (e, i) {
-    // payoutLi[i].appendChild(ulElem)
+    payoutLi.forEach(function (e, i) {
     const ulElem = document.createElement('ul');
     payoutLi[i].appendChild(ulElem).classList.add('payout__list__contents')
 
@@ -31,16 +26,3 @@ function start(bank) {
     }
   })
 }
-// 1 li 그리기
-// 2 span 태그 label 태그 그리기
-// 3 데이터 붙여넣기
-
-//1.날짜 date 
-//2 history
-//3 가격 price 
-
-// sum 계산하는법
-// 날짜 추출하는 법 
-
-
-// 자바스크립트 중복제거 
