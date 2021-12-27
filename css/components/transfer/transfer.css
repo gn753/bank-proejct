@@ -1,0 +1,51 @@
+
+.transfer__title {
+  margin-top: 12px;
+  margin-bottom: 33px;
+}
+.transfer__title h1 {
+  font-size: 24px;
+}
+.transfer__profile {
+  display: flex;
+}
+.transfer__btn {
+  height: 47px;
+  line-height: 47px;
+  text-align: center;
+  border: 1px solid #858585;
+  border-radius: 4px;
+  margin-bottom: 44px;
+}
+.transfer__list-item {
+  margin-bottom: 17px;
+}
+.profile__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile__left {
+  display: flex;
+}
+.profile__figure {
+  width: 54px;
+  height: 54px;
+  margin-right: 17px;
+}
+.profile__user-name {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26.64px;
+}
+.profile__user-number {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 23.68px;
+  color: #444444;
+}
+.icon-star {
+  width: 24px;
+  height: 24px;
+  background-image: url('/assets/icon/icon-star-yellow.svg');
+}

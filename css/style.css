@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+
+
+main {
+  /* padding-top: 44px; */
+}
+body {
+  overflow: hidden;
+}
+.pt-44 {
+  padding-top: 44px;
+}
+.container {
+  margin: 25px 37px 0 30px;
+  padding-top: 25px;
+  overflow: hidden;
+}
+/* main */
+.main__account {}
+.main__account .account__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 27px;
+  padding-right: 21px;
+  margin-bottom: 33px;
+}
+.main__account .account__header img {
+  width: 44px;
+  height: 43px;
+}
+.account__header > div {
+  display: flex;
+  align-items: center;
+}
+.account__header__title {
+  font-size: 18px;
+}
+.main__account .account__header i {
+  cursor: pointer;
+}
+.main__account .account__header .icon-pay {
+  width: 24px;
+  height: 21px;
+  background-image: url('/assets/icon/icon-pay.svg');
+  margin-right: 18px;
+}
+.main__account .account__header .icon-search {
+  width: 24px;
+  height: 24px;
+  background-image: url('/assets/icon/icon-saerch.svg');
+}
+
+.account__info {
+  position: relative;
+  width: 279px;
+  height: 155px;
+  border-radius: 12px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 14px 17px 6px 0;
+}
+.account__number p {
+  text-align: center;
+  padding-left: 20px;
+  color: #858585;
+}
+.acount__money {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 23px;
+}
+.acount__money sub {
+  font-size: 14px;
+  margin-left: 2px;
+}
+.account__chart {
+  display: flex;
+  align-items: center;
+}
+.account__chart > div {
+  display: flex;
+  align-items: center;
+  width: 202px;
+  margin-left: 32px;
+}
+
+.account__chart__yellow {
+  width: 62.37623762376%;
+  height: 6px;
+  background: #FFDB4C;
+  border-radius: 3px 0px 0px 3px;
+}
+.account__chart__orange {
+  width: 4px;
+  height:17px;
+  margin: 0 2px;
+  background: #FF5F00;
+  border-radius: 2px;
+}
+.account__chart__gray {
+  width: 35.14851485149%;
+  height: 6px;
+  background-color: #C4C4C4;
+  border-radius: 0px 3px 3px 0;
+}
+.account__info .icon-graph {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 12px;
+  background-image: url('/assets/icon/icon-graph.svg');
+  background-size:cover;
+}
+.account__chart__score-msg {
+  margin-top: 12px;
+  text-align: center;
+}
+.account__transfer__btn {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.account__ad {
+  margin: 21px 0;
+  text-align: center;
+  font-weight: 400;
+}
+.account__ad a {
+  text-decoration: underline;
+  font-weight:500;
+  margin-left: 6px;
+}
+
+/* payout */
+.payout {
+  position: absolute;
+  top: 352px;
+  width: 100%;
+  background: #F5F5F5;
+  border-radius: 30px 30px 0px 0px;
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  transition: 0.5s;
+}
+.payout.active {
+  top: 80px;
+  transition: 0.5s;
+  /* height: 100vh; */
+}
+.payout__scroll-btn {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 48px;
+  height: 2.15px;
+  transform: translateX(-50%);
+  font-size: 0;
+  background-color: #C4C4C4;
+  cursor: pointer;
+}
+.payout__bucket-list {
+  display: flex;
+  width: 300%;
+}
+.payout__bucket-item {
+  position: relative;
+  width: 162px;
+  height: 45px;
+  background-color: #DADADA;
+  color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.payout__bucket-item:nth-child(2) {
+  margin-left: 13px;
+}
+.payout__bucket-item div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 97px;
+  padding-left: 12px;
+  padding-top: 5px;
+  background: orange;
+  font-size: 12px;
+}
+.payout__bucket-item div p {
+  line-height: 17px;
+}
+
+.payout__inner {
+  margin-top: 16px;
+  height: 500px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+.payout__inner::-webkit-scrollbar {
+  display: none;
+}
+.payout__list {
+  margin-bottom: 38px;
+}
+.payout__list__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.payout__list__header .title {
+  font-weight: 700;
+}
+.payout__list__header .total-pay {
+  color: #B4B4B4;
+}
+.payout__list__contents {
+}
+.payout__list__contents li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 26px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #DCDCDC;
+}
+.payout__list__contents li:last-child {
+  border:none
+}
+.payout__list__contents li .active--orange {
+  color: #FF5F00;
+}
+
+
+
+/* */

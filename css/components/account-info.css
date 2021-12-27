@@ -1,0 +1,85 @@
+
+.account__info {
+  position: relative;
+  width: 279px;
+  height: 155px;
+  border-radius: 12px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 14px 17px 6px 0;
+}
+.account__number p {
+  text-align: center;
+  padding-left: 20px;
+  color: #858585;
+}
+.acount__money {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 23px;
+}
+.acount__money sub {
+  font-size: 14px;
+  margin-left: 2px;
+}
+.account__chart {
+  display: flex;
+  align-items: center;
+}
+.account__chart > div {
+  display: flex;
+  align-items: center;
+  width: 202px;
+  margin-left: 32px;
+}
+
+.account__chart__yellow {
+  width: 62.37623762376%;
+  height: 6px;
+  background: #FFDB4C;
+  border-radius: 3px 0px 0px 3px;
+}
+.account__chart__orange {
+  width: 4px;
+  height:17px;
+  margin: 0 2px;
+  background: #FF5F00;
+  border-radius: 2px;
+}
+.account__chart__gray {
+  width: 35.14851485149%;
+  height: 6px;
+  background-color: #C4C4C4;
+  border-radius: 0px 3px 3px 0;
+}
+.account__info .icon-graph {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 12px;
+  background-image: url('/assets/icon/icon-graph.svg');
+  background-size:cover;
+}
+.account__chart__score-msg {
+  margin-top: 12px;
+  text-align: center;
+}
+.account__transfer__btn {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.account__ad {
+  margin: 21px 0;
+  text-align: center;
+  font-weight: 400;
+}
+.account__ad a {
+  text-decoration: underline;
+  font-weight:500;
+  margin-left: 6px;
+}
