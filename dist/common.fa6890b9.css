@@ -1,0 +1,154 @@
+/* noto-sans kr */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+/* reset  */
+
+
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+
+
+  /* background-color: #DCCDB6; */
+}
+.sub-page {
+  padding: 0 30px;
+}
+.pt-44 {
+  padding-top: 44px;
+}
+.cancel {
+  position: absolute;
+  top: 44px;
+  right: 13px;
+  font-weight: 300;
+  line-height: 20.72px;
+  text-decoration: none;
+  color: #000;
+}
+/* status-bar */
+.status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 21px;
+  padding-right: 15px;
+  z-index: 3;
+}
+.status-bar__column i {
+  display: inline-block;
+}
+.status-bar__column .icon-connect {
+  width: 17px;
+  height: 11px;
+  background-image: url('/icon-connect.0ae69ce7.svg');
+} 
+.status-bar__column .icon-wifi {
+  width: 15px;
+  height: 11px;
+  background-image: url('/icon-Wifi.0aec4e9a.svg');
+}
+.status-bar__time {
+  font-weight: 700;
+}
+.status-bar__column .icon-bettery {
+  width: 24px;
+  height: 11px;
+  background-image: url('/icon-Battery.9471ab0f.svg');
+}
+
+/* gnb-nav */
+
+.gnb {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 76px;
+  background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+  font-size: 0;
+}
+.gnb__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-left: 48px;
+  padding-right: 34px;
+}
+.gnb__list .gnb__btn {
+  cursor: pointer;
+}
+.gnb__list .gnb__btn:nth-child(1) {
+  width: 28px;
+  height: 28px;
+  background-image: url('/icon-nav-home.528cf981.svg');
+}
+.gnb__list .gnb__btn:nth-child(2) {
+  width: 30px;
+  height: 24px;
+  background-image: url('/icon-nav-group.4bea07f7.svg');
+} 
+.gnb__list .gnb__btn:nth-child(3) {
+  width: 24px;
+  height: 24px;
+  background-image: url('/icon-nav-chat.9445e434.svg');
+} 
+.gnb__list .gnb__btn:nth-child(4) {
+  width: 26px;
+  height: 28px;
+  background-image: url('/icon-nav-more.7da4fa9f.svg');
+  background-size: contain;
+} 
+
+/* 버킷리스트 bucket-list */
+.payout__bucket-item {
+  position: relative;
+  width: 162px;
+  height: 45px;
+  background-color: #DADADA;
+  color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.payout__bucket-item:nth-child(2) {
+  margin-left: 13px;
+}
+.payout__bucket-item div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 97px;
+  padding-left: 12px;
+  padding-top: 5px;
+  font-size: 12px;
+}
+.payout__bucket-item div p {
+  line-height: 17px;
+}
+
+/* buket-item 목표 퍼센티지 색상 */
+.charge--orange {
+  background: orange;
+}
+div.charge-bg--sky {
+  background: #55ACEE;
+}
+div.charge-bg--navy {
+  background: #0A73C3;
+}
+div.charge-bg--green {
+  background: #005F59;
+}
+div.charge-bg--yellow {
+  background: #EEBA00;
+}
+
+
+
+
+/*# sourceMappingURL=/common.fa6890b9.css.map */

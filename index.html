@@ -5,162 +5,418 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>생활비</title>
+  <title>고지훈</title>
   <!-- Reset.css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="css/components/common.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/includeHTML.js"></script>
-  <script defer src="/js/script.js"></script>
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="./css/components/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/css/components/transfer/transfer.css">
+  <link rel="stylesheet" href="/css/components/transfer/transfer-active.css">
+  <script defer src="./js/bucket.js"></script>
+  <script defer src="./js/includeHTML.js"></script>
+  <script defer src="./js/dataList.js"></script>
+  <script defer src="./js/script.js"></script>
+  <style>
+
+  </style>
 </head>
 
 <body>
   <!-- status include -->
   <div data-include-path="assets/html/status-bar.html"></div>
-  <main class="main pt-44">
-    <section class="main__account">
-      <header class="account__header">
-        <img class="account__header__avatar" src="./assets/img/main-user-profile-01.png" alt="">
+  <div class="swiper">
+    <div class="swiper-wrapper pt-44">
+      <main class="main swiper-slide">
+        <section class="main__account">
+          <header class="account__header">
+            <img class="account__header__avatar" src="./assets/img/main-user-profile-01.png" alt="">
 
-        <h3 class="account__header__title">생활비</h3>
-        <div>
-          <i class="icon-pay"></i>
-          <i class="icon-search"></i>
-        </div>
-      </header>
-      <div class="account__info">
-        <div class="account__number">
-          <p>355-673877-78773</p>
-        </div>
-        <h3 class="acount__money">1,240,000<sub>원</sub></h3>
-        <div class="account__chart">
-          <div>
-            <div class="account__chart__yellow">
-            </div>
-            <div class="account__chart__orange"></div>
-            <div class="account__chart__gray"></div>
-          </div>
-          <i class="icon-graph"></i>
-        </div>
-        <p class="account__chart__score-msg">5일 동안 210,000원 남음
-        </p>
-        <a class="account__transfer__btn">이체</a>
-      </div>
-      <footer class="account__ad">
-        <span>지금 낮은 이자로 어쩌고저쩌고!<a>GO</a></span>
-      </footer>
-    </section>
-    <section class="payout">
-      <div class="payout__scroll-btn" role="button">추가하기</div>
-      <div class="container">
-        <ul class="payout__bucket-list">
-          <li class="payout__bucket-item">
+            <h3 class="account__header__title">생활비</h3>
             <div>
-              <p>여행가자!</p>
-              <p>842,200원</p>
+              <i class="icon-pay"></i>
+              <i class="icon-search"></i>
             </div>
-          </li>
-          <li class="payout__bucket-item">
+          </header>
+          <div class="account__info">
+            <div class="account__number">
+              <p>355-673877-78773</p>
+            </div>
+            <h3 class="acount__money">1,240,000<sub>원</sub></h3>
+            <div class="account__chart">
+              <div>
+                <div class="account__chart__yellow">
+                </div>
+                <div class="account__chart__orange"></div>
+                <div class="account__chart__gray"></div>
+              </div>
+              <i class="icon-graph"></i>
+            </div>
+            <p class="account__chart__score-msg">5일 동안 210,000원 남음
+            </p>
+            <a class="account__transfer__btn">이체</a>
+          </div>
+          <footer class="account__ad">
+            <span>지금 낮은 이자로 어쩌고저쩌고!<a>GO</a></span>
+          </footer>
+        </section>
+        <section class="payout">
+          <div class="payout__scroll-btn" role="button">확장하기</div>
+          <div class="container">
+            <div class="swiper">
+              <ul class="payout__bucket-list swiper-wrapper">
+                <li role="button" class="bucket-item-add swiper-slide">
+                  버튼추가
+                </li>
+              </ul>
+            </div>
+              <!-- add-btn input -->
+            <div class="bucket-item__modal">
+              <input type="text" class="bucket-item__title">
+              <input type="text" class="bucket-item__target">
+              <button class="bucket-item__modal__add">추가</button>
+            </div>
+            <div class="payout__inner">
+              <div class="payout__list">
+                <header class="payout__list__header">
+                  <h4 class="title">오늘</h4>
+                  <span class="total-pay">127,600원 지출</span>
+                </header>
+              </div>
+              <div class="payout__list">
+                <header class="payout__list__header">
+                  <h4 class="title">오늘</h4>
+                  <span class="total-pay">127,600원 지출</span>
+                </header>
+              </div>
+              <div class="payout__list">
+                <header class="payout__list__header">
+                  <h4 class="title">오늘</h4>
+                  <span class="total-pay">127,600원 지출</span>
+                </header>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- home 2번째 -->
+      <main class="main swiper-slide">
+        <section class="main__account">
+          <header class="account__header">
+            <img class="account__header__avatar" src="/assets/img/main-user-profile-02.png" alt="">
+
+            <h3 class="account__header__title">의민이 용돈</h3>
             <div>
-              <p>여행가자!</p>
-              <p>842,200원</p>
+              <i class="icon-pay"></i>
+              <i class="icon-search"></i>
             </div>
-          </li>
-        </ul>
-        <div class="payout__inner">
-          <div class="payout__list">
-            <header class="payout__list__header">
-              <h4 class="title">오늘</h4>
-              <span class="total-pay">127,600원 지출</span>
-            </header>
-            <ul class="payout__list__contents">
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span class="active--orange">+ 32,000</span>
+          </header>
+          <div class="account__info">
+            <div class="account__number">
+              <p>23-232117-34773</p>
+            </div>
+            <h3 class="acount__money">440,000<sub>원</sub></h3>
+            <div class="account__chart">
+              <div>
+                <div class="account__chart__yellow">
+                </div>
+                <div class="account__chart__orange"></div>
+                <div class="account__chart__gray"></div>
+              </div>
+              <i class="icon-graph"></i>
+            </div>
+            <p class="account__chart__score-msg">5일 동안 210,000원 남음
+            </p>
+            <a class="account__transfer__btn">이체</a>
+          </div>
+        </section>
+      </section>
+      <section class="payout">
+        <div class="payout__scroll-btn" role="button">확장하기</div>
+        <div class="container">
+          <div class="swiper">
+            <ul class="payout__bucket-list swiper-wrapper">
+              <li role="button" class="bucket-item-add swiper-slide">
+                버튼추가
               </li>
             </ul>
           </div>
-          <div class="payout__list">
-            <header class="payout__list__header">
-              <h4 class="title">어제</h4>
-              <span class="total-pay">127,600원 지출</span>
-            </header>
-            <ul class="payout__list__contents">
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span class="active--orange">+ 32,000</span>
-              </li>
-            </ul>
+            <!-- add-btn input -->
+          <div class="bucket-item__modal">
+            <input type="text" class="bucket-item__title">
+            <input type="text" class="bucket-item__target">
+            <button class="bucket-item__modal__add">추가</button>
           </div>
-          <div class="payout__list">
-            <header class="payout__list__header">
-              <h4 class="title">어제</h4>
-              <span class="total-pay">127,600원 지출</span>
-            </header>
-            <ul class="payout__list__contents">
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span>32,000</span>
-              </li>
-              <li>
-                <label>미스터 피자</label> 
-                <span class="active--orange">+ 32,000</span>
-              </li>
-            </ul>
+          <div class="payout__inner">
+            <div class="payout__list">
+              <header class="payout__list__header">
+                <h4 class="title">오늘</h4>
+                <span class="total-pay">127,600원 지출</span>
+              </header>
+            </div>
+            <div class="payout__list">
+              <header class="payout__list__header">
+                <h4 class="title">오늘</h4>
+                <span class="total-pay">127,600원 지출</span>
+              </header>
+            </div>
+            <div class="payout__list">
+              <header class="payout__list__header">
+                <h4 class="title">오늘</h4>
+                <span class="total-pay">127,600원 지출</span>
+              </header>
+            </div>
           </div>
         </div>
+      </section>
+      </main>
+      <!-- home 3번째 -->
+      <main class="main swiper-slide">
+        <section class="main__account">
+          <header class="account__header">
+            <img class="account__header__avatar" src="/assets/img/main-user-profile-03.png" alt="">
+    
+            <h3 class="account__header__title">할머니 계좌</h3>
+            <div>
+              <i class="icon-pay"></i>
+              <i class="icon-search"></i>
+            </div>
+          </header>
+          <div class="account__info">
+            <div class="account__number">
+              <p>155-23422-78773</p>
+            </div>
+            <h3 class="acount__money">3,140,000<sub>원</sub></h3>
+            <div class="account__chart">
+              <div>
+                <div class="account__chart__yellow">
+                </div>
+                <div class="account__chart__orange"></div>
+                <div class="account__chart__gray"></div>
+              </div>
+              <i class="icon-graph"></i>
+            </div>
+            <p class="account__chart__score-msg">5일 동안 120,000원 남음
+            </p>
+            <a class="account__transfer__btn">이체</a>
+          </div>
+        </section>
+        <section class="payout">
+          <div class="payout__scroll-btn" role="button">확장하기</div>
+          <div class="container">
+            <div class="swiper">
+              <ul class="payout__bucket-list swiper-wrapper">
+                <li role="button" class="bucket-item-add swiper-slide">
+                  버튼추가
+                </li>
+              </ul>
+            </div>
+              <!-- add-btn input -->
+            <div class="bucket-item__modal">
+              <input type="text" class="bucket-item__title">
+              <input type="text" class="bucket-item__target">
+              <button class="bucket-item__modal__add">추가</button>
+            </div>
+            <div class="payout__inner">
+              <div class="payout__list">
+                <header class="payout__list__header">
+                  <h4 class="title">오늘</h4>
+                  <span class="total-pay">127,600원 지출</span>
+                </header>
+              </div>
+              <div class="payout__list">
+                <header class="payout__list__header">
+                  <h4 class="title">오늘</h4>
+                  <span class="total-pay">127,600원 지출</span>
+                </header>
+              </div>
+              <div class="payout__list">
+                <header class="payout__list__header">
+                  <h4 class="title">오늘</h4>
+                  <span class="total-pay">127,600원 지출</span>
+                </header>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- home 5번째 이체 -->
+      <main class="swiper-slide transfer pt-44">
+        <div class="sub-page">
+          <header class="transfer__title">
+            <h1>이체</h1>
+          </header>
+          <div class="transfer__btn">
+            직접입력
+          </div>
+          <!-- 이체 취소버튼 -->
+          <a class="cancel" href="javascript:void(0)">취소</a>
+          <div 
+          class="transfor__contents">
+            <ul class="transfer__list">
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-01.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">정을수</span>
+                      <p class="profile__user-number">신한 112048393002</p>
+                    </div>
+                  </div>
+                  <!-- 별이 필요할 경우에만 넣을것 -->
+                  <i class="profile__right icon-star"></i>
+                </div>
+              </li>
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-02.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">신이현</span>
+                      <p class="profile__user-number">국민 112048393002</p>
+                    </div>
+                  </div>
+                  <!-- 별이 필요할 경우에만 넣을것 -->
+                  <i class="profile__right icon-star"></i>
+                </div>
+              </li>
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-03.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">웅진코웨이</span>
+                      <p class="profile__user-number">국민 112048393002</p>
+                    </div>
+                  </div>
+                  <!-- 별이 필요할 경우에만 넣을것 -->
+                  <i class="profile__right icon-star"></i>
+                </div>
+              </li>
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-04.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">기강 슈퍼</span>
+                      <p class="profile__user-number">하나 112048393002</p>
+                    </div>
+                  </div>
+                  <!-- 별이 필요할 경우에만 넣을것 -->
+                  <i class="profile__right icon-star"></i>
+                </div>
+              </li>
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-05.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">김민석</span>
+                      <p class="profile__user-number">하나 112048393002</p>
+                    </div>
+                  </div>
+                  <!-- 별이 필요할 경우에만 넣을것 -->
+                  <i class="profile__right icon-star"></i>
+                </div>
+              </li>
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-06.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">기성훈</span>
+                      <p class="profile__user-number">하나 112048393002</p>
+                    </div>
+                  </div>
+                  <!-- 별이 필요할 경우에만 넣을것 -->
+                  <i class="profile__right icon-star"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </main>
+      <main class="swiper-slide transfer pt-44">
+        <div class="sub-page">
+          <header class="transfer__title">
+            <h1>이체</h1>
+          </header>
+          <!-- 이체 취소버튼 -->
+          <a class="transfer__cancel" href="javascript:void(0)">취소</a>
+          <div class="transfor__contents">
+            <ul class="transfer__list">
+              <li class="transfer__list-item">
+                <!-- 이체 리스트 -->
+                <div class="profile__info">
+                  <div class="profile__left">
+                    <img class="profile__figure" src="/assets/img/transfer-user-profile-01.png" alt="프로필 사진">
+                    <div>
+                      <span class="profile__user-name">정을수</span>
+                      <p class="profile__user-number">신한 112048393002</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="transfor__input-space">
+              <input type="text" onkeyup="inputNumberFormat(this)"/>
+              <span>원</span>
+            </div>
+            <div class="transfor__result">
+              <p>생활비 계좌 : 1,752,900 에서</p>
+            </div>
+            <div class="tranfor__number-pad">
+              <ul>
+                <li>1</li>
+                <li>4</li>
+                <li>7</li>
+                <li>0</li>
+              </ul>
+              <ul>
+                <li>2</li>
+                <li>5</li>
+                <li>8</li>
+                <li>00</li>
+              </ul>
+              <ul>
+                <li>3</li>
+                <li>6</li>
+                <li>9</li>
+                <li>0</li>
+              </ul>
+            </div>
+          </div>
+      </main>
+      <div class="transfor__next">
+        다음
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+
+  <!-- home 3번째 -->
   <!-- nav include -->
   <div data-include-path="assets/html/gnb.html"></div>
-
   <script>
-    
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: false,
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      // Navigation arrows
+      // And if we need scrollbar
+    });
+
   </script>
 </body>
 

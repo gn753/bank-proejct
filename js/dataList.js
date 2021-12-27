@@ -1,35 +1,40 @@
-fetch(
-  'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211223%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211223T102152Z&X-Amz-Expires=86400&X-Amz-Signature=7c7a98ce242cd7c5bb5fd3b35efc9443c0f458fa160ccf904214074e22b476ec&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject'
-)
+fetch('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211227%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211227T035242Z&X-Amz-Expires=86400&X-Amz-Signature=27256ecfbb15bff279ed0f8efe61b8dc17b90df8e8f5d843e0abf0a844df11be&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject')
+
 .then(res => res.json())
-.then(function (data) {
-  console.log(data);
-})
-.then(obj => {
-  start(obj)
-})
+.then(obj => { start(obj) })
 
 
 
 
-function start(data) {
-const ulElem = document.createElement('ul')
-document.querySelector('#app').appendChild(ulElem)
-const dateArr = [] // 날짜 데이터
-for (let i = 0; i < pay.bankList.length; i++) {
-  dateArr.push(data.bankList[i].date);
-  const sapnEl = document.createElement('span')
-  const labelEl = document.createElement('label')
-  const liEl = document.createElement('li')
-  // const imgElem = document.createElement('img')
-  const pEl = document.createElement('p')
-  pElem.textContent = data.bankList[i].history;
-  liElem.appendChild(pEl)
-  ulElem.appendChild(liEl)
+
+function start(bank) {
+  let payoutLi = document.querySelectorAll('.payout__list');
+  let num = 5;
+  // payoutLi[2].appendChild(ulElem)
+  
+  const bankData = bank.bankList
+  payoutLi.forEach(function (e, i) {
+    // payoutLi[i].appendChild(ulElem)
+    const ulElem = document.createElement('ul');
+    payoutLi[i].appendChild(ulElem).classList.add('payout__list__contents')
+
+    //반복문
+    for (let i = 0; i < 5; i++) {
+      const liElem = document.createElement('li');
+      const spanElem = document.createElement('span');
+      const pElem = document.createElement('p')
+      spanElem.textContent = bank.bankList[i].history;
+      pElem.textContent = bank.bankList[i].price;
+      ulElem.appendChild(liElem)
+      liElem.appendChild(spanElem);
+      liElem.appendChild(pElem);
+    }
+  })
 }
-const liElem = document.createElement('li')
-const imgElem = document.createElement('img')
-}
+// 1 li 그리기
+// 2 span 태그 label 태그 그리기
+// 3 데이터 붙여넣기
+
 //1.날짜 date 
 //2 history
 //3 가격 price 
@@ -39,9 +44,3 @@ const imgElem = document.createElement('img')
 
 
 // 자바스크립트 중복제거 
-
-const set = new Set(dateArr) // 중복제거 함수 Set을 변수 set에 넣는다
-const newDateArr = [...set] // 중복제거한 날짜를 뽑아서 넣는다.
-
-
-
